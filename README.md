@@ -1,1 +1,10 @@
 # Secured-password-generator
+#secure Password Generator Using Python
+import secrets
+alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*"
+password_length = int(input("Enter the desired password length: "))
+password = ""
+for i in range(password_length):
+    password += secrets.choice(alphabet)
+    
+print("Generated password:", password)
